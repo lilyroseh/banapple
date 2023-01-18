@@ -15,6 +15,12 @@
   -webkit-text-size-adjust: 100%;
 }
 
+body {
+  background-image: url("./public/img/graphmili.jpg");
+  background-repeat: no-repeat;
+  background-size: 1920px;
+}
+
 a {
   font-weight: 500;
   color: #646cff;
