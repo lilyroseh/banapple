@@ -1,81 +1,54 @@
-import "./style.css";
+const jpgURL = [
+  "./public/img/jpgBanana/andybanana-620.jpeg",
+  "./public/img/jpgBanana/baker-bananaskirt1.jpg",
+  "./public/img/jpgBanana/BananaPost89_AnnaBanana.jpeg",
+]; // list of image URLs
 
-import * as THREE from "three";
-import { GLTFLoader } from "three/examples/jsm/loaders/GLTFLoader";
+const pngURL = [
+  "./public/img/pngBanana/andybanana-620.png",
+  "./public/img/pngBanana/baker-bananaskirt1.png",
+  "./public/img/pngBanana/BananaPost89_AnnaBanana.png",
+];
 
-import { OrbitControls } from "three/addons/controls/OrbitControls.js";
+const jpgimages = []; /// array to hold images.
+const pngimages = [];
+var imageCount = 0; // number of loaded images;
+var pngCount = 0;
 
-let camera, scene, renderer;
-
-init();
-render();
-
-function init() {
-  const container = document.createElement("div");
-  document.body.appendChild(container);
-
-  renderer = new THREE.WebGLRenderer({ antialias: true });
-  renderer.setPixelRatio(window.devicePixelRatio);
-  renderer.setSize(window.innerWidth, window.innerHeight);
-  renderer.toneMapping = THREE.ACESFilmicToneMapping;
-  renderer.toneMappingExposure = 1;
-  renderer.outputEncoding = THREE.sRGBEncoding;
-  container.appendChild(renderer.domElement);
-
-  camera = new THREE.PerspectiveCamera(
-    45,
-    window.innerWidth / window.innerHeight,
-    1,
-    2000
-  );
-  camera.position.set(0, 100, 0);
-
-  const pmremGenerator = new THREE.PMREMGenerator(renderer);
-
-  scene = new THREE.Scene();
-  scene.background = new THREE.Color(0xbbbbbb);
-
-  const grid = new THREE.GridHelper(500, 10, 0xffffff, 0xffffff);
-  grid.material.opacity = 0.5;
-  grid.material.depthWrite = false;
-  grid.material.transparent = true;
-  scene.add(grid);
-
-  const loader = new GLTFLoader().setPath("models/");
-  // loader.setMeshoptDecoder(MeshoptDecoder);
-  loader.load("scene.gltf", function (gltf) {
-    // coffeemat.glb was produced from the source scene using gltfpack:
-    // gltfpack -i coffeemat/scene.gltf -o coffeemat.glb -cc -tc
-    // The resulting model uses EXT_meshopt_compression (for geometry) and KHR_texture_basisu (for texture compression using ETC1S/BasisLZ)
-
-    // gltf.scene.position.y = 8;
-
-    scene.add(gltf.scene);
-
-    render();
-  });
-
-  const controls = new OrbitControls(camera, renderer.domElement);
-  controls.addEventListener("change", render); // use if there is no animation loop
-  controls.minDistance = 400;
-  controls.maxDistance = 1000;
-  controls.target.set(10, 90, -16);
-  controls.update();
-
-  window.addEventListener("resize", onWindowResize);
+// function called once all images have loaded.
+function allLoaded() {
+  // all images have loaded and can be rendered
+  ctx.drawImage(pngimages[1], 0, 0); // draw all pngs
+  ctx.drawImage(pngimages[0], 0, 0);
 }
 
-function onWindowResize() {
-  camera.aspect = window.innerWidth / window.innerHeight;
-  camera.updateProjectionMatrix();
+// iterate each image URL, create, load, and add it to the images array
+jpgURL.forEach((src) => {
+  // for each image url
+  const image = new Image();
+  image.src = src;
+  image.onload = () => {
+    imageCount += 1;
+    if (imageCount === jpgURL.length) {
+      // have all loaded????
+      allLoaded(); // call function to start rendering
+    }
+  };
+  jpgimages.push(image); // add loading image to images array
+});
+// the image onload event will not be called until all current execution is
+// complete.
 
-  renderer.setSize(window.innerWidth, window.innerHeight);
-
-  render();
-}
-
-//
-
-function render() {
-  renderer.render(scene, camera);
-}
+pngURL.forEach((src) => {
+  // for each image url
+  const image = new Image();
+  image.src = src;
+  image.onload = () => {
+    imageCount += 1;
+    if (imageCount === pngURL.length) {
+      // have all loaded????
+      allLoaded(); // call function to start rendering
+    }
+  };
+  pngimages.push(image); // add loading image to images array
+});
