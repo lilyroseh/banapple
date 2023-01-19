@@ -1,9 +1,9 @@
-//test img pixel value
+// //test img pixel value
 // const img = document.getElementById("test");
 // const canvas = document.createElement("canvas");
 // canvas.width = img.width;
 // canvas.height = img.height;
-// canvas.getContext("2d").drawImage(img, 0, 0, img.width, img.height);
+// var ctx = canvas.getContext("2d").drawImage(img, 0, 0, img.width, img.height);
 
 // document.getElementById("test").addEventListener("click", (e) => {
 //   const pixelData = canvas
@@ -11,6 +11,7 @@
 //     .getImageData(e.offsetX, e.offsetY, 1, 1).data;
 //   console.log(pixelData);
 // });
+// Log events flag
 
 // Select all parts
 const parts = document.querySelectorAll("div[id^='part']");
@@ -22,6 +23,7 @@ document.getElementById("part1").addEventListener("mouseover", (e) => {
     e.target.ids
   ).src = `./public/img/BananaPost89_AnnaBanana.jpeg`;
 });
+
 document.getElementById("part1").addEventListener("mouseout", (e) => {
   console.log(e.target.id);
   document.getElementById(e.target.id).src =
@@ -33,6 +35,14 @@ document.getElementById("part2").addEventListener("mouseover", (e) => {
   document.getElementById(
     e.target.id
   ).src = `./public/img/Frida-Kahlo-Fruit-of-Life.jpeg`;
+});
+
+document.getElementById("part2").addEventListener("click", (e) => {
+  console.log(e.target.id);
+
+  document.getElementById(
+    e.target.id
+  ).src = `./public/img/baker-bananaskirt1.jpg`;
 });
 document.getElementById("part2").addEventListener("mouseout", (e) => {
   console.log(e.target.id);
