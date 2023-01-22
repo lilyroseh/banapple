@@ -137,7 +137,7 @@ canvas {
 }
 
 #weinstein {
-  width: 200px;
+  width: 200px !important;
 }
 
 #part2 {
