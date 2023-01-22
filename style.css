@@ -15,9 +15,11 @@
   -webkit-text-size-adjust: 100%;
 }
 
+
 html {
   width: 100%;
   height: 100%;
+  /* overflow: hidden; */
 }
 
 body {
@@ -134,7 +136,7 @@ canvas {
   top: 120px;
 }
 
-#annabanana {
+#weinstein {
   width: 200px;
 }
 
@@ -143,7 +145,7 @@ canvas {
   top: 60%;
 }
 
-#kahlofruit {
+#francoisegilot {
   width: 200px;
 }
 
@@ -152,7 +154,7 @@ canvas {
   top: 60%;
 }
 
-#baker {
+#kruger {
   height: 200px;
 }
 
@@ -161,7 +163,7 @@ canvas {
   top: 60%;
 }
 
-#chirico {
+#meszaros {
   width: 200px;
 }
 
@@ -170,7 +172,7 @@ canvas {
   top: 60%;
 }
 
-#CurrinAnna {
+#pippilotti {
   width: 200px;
 }
 
@@ -179,63 +181,8 @@ canvas {
   top: 80%;
 }
 
-#andyLawrence {
+#ruthbowman {
   height: 200px;
-}
-
-#part7 {
-  left: 78%;
-  top: 80%;
-}
-
-#marioBanana {
-  height: 200px;
-}
-
-#part8 {
-  left: 15%;
-  top: 75%;
-}
-
-#meret {
-  width: 150px;
-}
-
-#part9 {
-  left: 10%;
-  top: 90%;
-}
-
-#olgacosta {
-  width: auto;
-  height: 200px;
-}
-
-#part10 {
-  left: 70%;
-  top: 90%;
-}
-
-#sarahLucas {
-  width: 150px;
-}
-
-#part11 {
-  left: 78%;
-  top: 60%;
-}
-
-#bananawoman {
-  width: 200px;
-}
-
-#part12 {
-  left: 83%;
-  top: 80%;
-}
-
-#natLL {
-  width: 200px;
 }
 
 #arrow-vertical {
@@ -245,10 +192,39 @@ canvas {
 
 }
 
+#apple {
+  left: 65%;
+  top: 35%;
+}
+
+#apple-half {
+  width: 200px;
+}
+
+#banana {
+  left: 20%;
+  top: 40%;
+  transform: rotate(115deg);
+}
+
+#banana-half {
+  width: 200px;
+}
+
 #arrow-horizontal {
   position: absolute;
   top: 50%;
   left: 3%;
+}
+
+#choose {
+  position: absolute;
+  left: 47%;
+  top: 40%;
+  font-family: meno-display, serif;
+  font-size: 2em;
+  font-weight: 600;
+  font-style: italic;
 }
 
 #top-title {
@@ -297,7 +273,7 @@ canvas {
   top: 9%;
 }
 
-#banana-container {
+#fruit-container {
   background-image: url("./public/img/background.svg");
   z-index: -100;
   /* width: 100%; */
