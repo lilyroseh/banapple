@@ -403,11 +403,9 @@ canvas {
   margin: 70px;
 }
 
-
 .hidden {
   display: none;
 }
-
 
 .modal {
   display: flex;
