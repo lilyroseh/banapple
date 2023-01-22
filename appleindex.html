@@ -11,8 +11,20 @@
   <body>
     <div id="main-container">
       <section class="modal hidden">
-        <div>modal text</div>
-        <img id="big-image-container" src="" />
+        <div id="modal-main-container">
+          <img id="big-image-container" src="" />
+          <div id="actions-container">
+            <div class="modal-action" id="close-action">Close</div>
+            <div class="modal-action" id="details-action">Details</div>
+          </div>
+          <div id="details-container" class="hidden">
+            <div id="close-modal-details-action">Close</div>
+            <div id="modal-header"></div>
+            <div id="modal-subheader"></div>
+            <div id="modal-date"></div>
+            <div id="modal-main-text"></div>
+          </div>
+        </div>
       </section>
       <div class="overlay hidden"></div>
       <a id="back-button" href="./index.html">Back</a>
@@ -27,7 +39,7 @@
       <div id="fruit-container">
         <div class="grid-item" id="applepart1">
           <img
-            src="./public/img/appleimgs/everydaymiracle-matthewweinnstein-2001.png"
+            src="./public/img/appleimgs/everydaymiracle-matthewweinnstein-2001.webp"
             id="weinstein"
             class="cursor-image"
           />
@@ -35,21 +47,21 @@
       </div>
       <div class="grid-item" id="applepart2">
         <img
-          src="./public/img/appleimgs/francoisegilot-adameve.png"
+          src="./public/img/appleimgs/francoisegilot-adameve.webp"
           class="cursor-image"
           id="francoisegilot"
         />
       </div>
       <div class="grid-item" id="applepart3">
         <img
-          src="./public/img/appleimgs/kruger.png"
+          src="./public/img/appleimgs/kruger.webp"
           class="cursor-image"
           id="kruger"
         />
       </div>
       <div class="grid-item" id="applepart4">
         <img
-          src="./public/img/appleimgs/michael-meszaros-1990.png"
+          src="./public/img/appleimgs/michael-meszaros-1990.webp"
           class="cursor-image"
           id="meszaros"
         />
@@ -57,7 +69,7 @@
 
       <div class="grid-item" id="applepart5">
         <img
-          src="./public/img/appleimgs/pippilotti.png"
+          src="./public/img/appleimgs/pippilotti.webp"
           class="cursor-image"
           id="pippilotti"
         />
@@ -65,7 +77,7 @@
 
       <div class="grid-item" id="applepart6">
         <img
-          src="./public/img/appleimgs/ruthbowman-willbarnet-1967.png"
+          src="./public/img/appleimgs/ruthbowman-willbarnet-1967.webp"
           class="cursor-image"
           id="ruthbowman"
         />
@@ -73,7 +85,7 @@
 
       <!-- <div class="grid-item" id="part7">
         <img
-          src="./public/img/bananaimgs/mario-banana.png"
+          src="./public/img/bananaimgs/mario-banana.webp"
           class="cursor-image"
           id="marioBanana"
         />
@@ -81,7 +93,7 @@
 
       <div class="grid-item" id="part8">
         <img
-          src="./public/img/bananaimgs/meret-mit-banane.png"
+          src="./public/img/bananaimgs/meret-mit-banane.webp"
           class="cursor-image"
           id="meret"
         />
@@ -89,7 +101,7 @@
 
       <div class="grid-item" id="part9">
         <img
-          src="./public/img/bananaimgs/olgaCosta-only1banana.png"
+          src="./public/img/bananaimgs/olgaCosta-only1banana.webp"
           class="cursor-image"
           id="olgacosta"
         />
@@ -97,21 +109,21 @@
 
       <div class="grid-item" id="part10">
         <img
-          src="./public/img/bananaimgs/sarahLucas1.png"
+          src="./public/img/bananaimgs/sarahLucas1.webp"
           class="cursor-image"
           id="sarahLucas"
         />
       </div>
       <div class="grid-item" id="part11">
         <img
-          src="./public/img/bananaimgs/margaretharrison-bananaWoman-nofilling.png"
+          src="./public/img/bananaimgs/margaretharrison-bananaWoman-nofilling.webp"
           class="cursor-image"
           id="bananawoman"
         />
       </div>
       <div class="grid-item" id="part12">
         <img
-          src="./public/img/bananaimgs/natLL0.png"
+          src="./public/img/bananaimgs/natLL0.webp"
           class="cursor-image"
           id="natLL"
         />

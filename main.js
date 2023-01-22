@@ -21,6 +21,9 @@ const openModal = function (imageName) {
   )[0];
   bigImageContainer.src = `./public/img/bananaimgs/${imageName}`;
 
+  // How do I load the apple pictures?
+  //bigImageContainer.src = `./public/img/appleimgs/${imageName}`;
+
   const modalHeader = document.getElementById("modal-header");
   const modalSubHeader = document.getElementById("modal-subheader");
   const modalDate = document.getElementById("modal-date");
