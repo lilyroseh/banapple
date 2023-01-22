@@ -211,6 +211,16 @@ canvas {
   width: 200px;
 }
 
+#back-button¡ {
+  position: absolute;
+  left: 1%;
+  top: 10px;
+  font-family: meno-display, serif;
+  font-size: 2em;
+  font-weight: 600;
+  font-style: italic;
+}
+
 #arrow-horizontal {
   position: absolute;
   top: 50%;
