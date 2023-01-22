@@ -11,8 +11,20 @@
   <body>
     <div id="main-container">
       <section class="modal hidden">
-        <div>modal text</div>
-        <img id="big-image-container" src="" />
+        <div id="modal-main-container">
+          <img id="big-image-container" src="" />
+          <div id="actions-container">
+            <div class="modal-action" id="close-action">Close</div>
+            <div class="modal-action" id="details-action">Details</div>
+          </div>
+          <div id="details-container" class="hidden">
+            <div id="close-modal-details-action">Close</div>
+            <div id="modal-header"></div>
+            <div id="modal-subheader"></div>
+            <div id="modal-date"></div>
+            <div id="modal-main-text"></div>
+          </div>
+        </div>
       </section>
       <div class="overlay hidden"></div>
       <a id="back-button" href="./index.html">Back</a>
