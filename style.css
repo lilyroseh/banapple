@@ -403,16 +403,22 @@ canvas {
   margin: 70px;
 }
 
+
+.hidden {
+  display: none;
+}
+
+
 .modal {
   display: flex;
   flex-direction: column;
   justify-content: center;
   gap: 0.4rem;
-  width: 450px;
+  min-width: 450px;
   padding: 1.3rem;
   min-height: 250px;
   position: absolute;
-  top: 34%;
+  top: 28%;
   left: 34%;
   background-color: white;
   border: 1px solid #ddd;
@@ -433,6 +439,60 @@ canvas {
   z-index: 1;
 }
 
-.hidden {
-  display: none;
+
+#modal-main-container {
+  display: flex;
+  flex-direction: row;
+}
+
+#big-image-container {
+  max-width: 600px;
+  max-height: 400px;
+}
+
+#actions-container {
+  padding-top: 10px;
+  padding-bottom: 10px;
+  margin-left: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+#details-container {
+  display: flex;
+  flex-direction: column;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+#close-modal-details-action {
+  text-align: right;
+  cursor: pointer;
+}
+
+.modal-action {
+  writing-mode: vertical-lr;
+  cursor: pointer;
+}
+
+#modal-header {
+  font-size: 20px;
+  margin-top: 20px;
+}
+
+#modal-subheader {
+  text-align: left;
+  font-size: 12px;
+}
+
+#modal-date {
+  text-align: left;
+  font-size: 12px;
+}
+
+#modal-main-text {
+  text-align: left;
+  max-width: 250px;
+  margin-top: 30px;
 }
