@@ -5,6 +5,8 @@ const closeModalDetailsButton = document.querySelector(
   "#close-modal-details-action"
 );
 
+// console.log(window.innerHeight, window.innerWidth);
+
 let modalHeaderText = "";
 let modalSubHeaderText = "";
 let modalDateText = "";
